@@ -1,0 +1,7 @@
+pylink-square==1.0.0
+pyserial==3.5
+styleframe==4.1
+colorama==0.4.6
+pandas==1.5.2
+colour==0.1.5
+XlsxWriter==3.0.9
