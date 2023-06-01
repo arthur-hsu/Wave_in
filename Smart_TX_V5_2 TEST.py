@@ -11,7 +11,7 @@ import shutil
 df , columns , dict_tmp , flag_IMSI = pd.DataFrame(columns=[]) , [] , {} , False
 opentime            = time.strftime( "%Y.%m.%d_%X", time.localtime() ).replace(":", "")
 filename            = os.path.basename(__file__).replace('.py','')
-TARGET_PORT         = 'COM6'# linux=='ttyUSBX'
+TARGET_PORT         = 'COM10'# linux=='ttyUSBX'
 MCU                 = 'STM32L071RZ'
 WORK_FILE           = os.getcwd()
 LOG_Folder          = os.path.join(WORK_FILE,'TEST RESULT')
@@ -20,7 +20,7 @@ os.makedirs('%s-%s'%(opentime, filename))
 os.chdir(WORK_FILE)
 LOG_DIRECTORY       = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename))
 SmartTxr_IOT1        = os.path.join(WORK_FILE,'FW','SmartTxr_IOT1.bin')
-REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s REPORT.xlsx'%filename)
+REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s_%s REPORT.xlsx'%(opentime, filename))
 excel_writer        = StyleFrame.ExcelWriter(REPORT)
 CHECK_PARSERMSG_LIST= [ # 'SmartTxr_IOT1_',
                         # 'Init RTC base',

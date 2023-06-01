@@ -6,10 +6,11 @@ import src.jlink_lib as jlink_lib
 import pandas as pd
 from styleframe import StyleFrame
 import src.pandas_lib as pd_write
+device_count = 0
 df , columns , dict_tmp , flag_IMSI = pd.DataFrame(columns=[]) , [] , {} , False
 opentime            = time.strftime( "%Y.%m.%d_%X", time.localtime() ).replace(":", "")
 filename            = os.path.basename(__file__).replace('.py','')
-TARGET_PORT         = 'COM6'# linux=='ttyUSBX'
+TARGET_PORT         = 'COM10'# linux=='ttyUSBX'
 MCU                 = 'STM32F303RE'
 WORK_FILE           = os.getcwd()
 LOG_Folder          = os.path.join(WORK_FILE,'TEST RESULT')
@@ -19,7 +20,7 @@ os.chdir(WORK_FILE)
 LOG_DIRECTORY       = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename))
 PEM_HEX             = os.path.join(WORK_FILE,'FW','BLwAPP_BG96_PEM_UploadRm.hex')
 ALL_23318_HEX       = os.path.join(WORK_FILE,'FW','all_23318.hex')
-REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s REPORT.xlsx'%filename)
+REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s_%s REPORT.xlsx'%(opentime, filename))
 excel_writer        = StyleFrame.ExcelWriter(REPORT)
 CHECK_PARSERMSG_LIST= ["WI 2022.07.12 t02",
                        "IOTBOX FW version : 23318",
@@ -51,8 +52,9 @@ CHECK_PARSERMSG_LIST= ["WI 2022.07.12 t02",
 
 
 def main():
-    device_count += 1
+    global device_count
     global columns, dict_tmp, df
+    
     # print(f"{columns=}")
     # print(f"{dict_tmp=}")
     # print(df)
@@ -120,7 +122,7 @@ def main():
                 # while not jlink.flash_file(file=PEM_HEX,rec=0):pass
                 # time.sleep(2)
                 while not jlink.reboot():pass
-
+        device_count += 1
         # print(f"{dict_tmp=}")
         # print(f"{columns=}")
 
@@ -199,8 +201,10 @@ def main():
         serial.Close()
         f.close()
         jlink.close()
-        
+
+
 if __name__ == '__main__':
+    
     device_count = 0
     port = ''
     cf.init()

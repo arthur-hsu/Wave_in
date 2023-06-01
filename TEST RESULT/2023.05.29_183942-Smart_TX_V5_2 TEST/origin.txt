@@ -1,2 +1,0 @@
-[SYSTEM MSG] KeyboardInterrupt
-[2023-05-29 18:55:28.603578]  [SYSTEM MSG] Dataframe save to excel.
