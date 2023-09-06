@@ -1,4 +1,5 @@
 import config.config as cf
+import sys
 import src.serial_lib as serial_lib
 import src.colorLog as log
 import os, re, time, datetime, sys,threading
@@ -11,7 +12,6 @@ import shutil
 df , columns , dict_tmp , flag_IMSI = pd.DataFrame(columns=[]) , [] , {} , False
 opentime            = time.strftime( "%Y.%m.%d_%X", time.localtime() ).replace(":", "")
 filename            = os.path.basename(__file__).replace('.py','')
-TARGET_PORT         = 'COM10'# linux=='ttyUSBX'
 MCU                 = 'STM32L071RZ'
 WORK_FILE           = os.getcwd()
 LOG_Folder          = os.path.join(WORK_FILE,'TEST RESULT')
@@ -160,7 +160,11 @@ if __name__ == '__main__':
     port = ''
     cf.init()
     cf.set_value('logname', '%s' % (os.path.join(LOG_DIRECTORY, "origin.txt")))#old log file
-    
+    if len(sys.argv)> 1:
+        TARGET_PORT = sys.argv[1]
+    else:
+        TARGET_PORT = 'COM7'# linux=='ttyUSBX'
+
     while True:
         try:
             f=open(cf.get_value('logname'),'w')
