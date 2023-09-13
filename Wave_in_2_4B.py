@@ -221,7 +221,6 @@ if __name__ == '__main__':
             columns.clear()
             flag_find, port = serial_lib.findPort(TARGET_PORT)
             if flag_find is True:
-                
                 log.Logger("[SYSTEM MSG] Connecting to {}".format(port),fore='GREEN',timestamp=0)
                 start_time=datetime.datetime.now()
                 serial  = serial_lib.Serial_Module(port, 115200, 3, '', 0.01)
