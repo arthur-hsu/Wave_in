@@ -5,7 +5,6 @@ import src.colorLog as log
 import os, re, time, datetime, sys
 import src.jlink_lib as jlink_lib
 import pandas as pd
-from styleframe import StyleFrame
 import src.pandas_lib as pd_write
 
 
@@ -32,7 +31,7 @@ LOG_DIRECTORY       = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename))
 PEM_HEX             = os.path.join(WORK_FILE,'FW','BLwAPP_BG96_PEM_UploadRm.hex')
 ALL_23318_HEX       = os.path.join(WORK_FILE,'FW','all_23318.hex')
 REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s_%s REPORT.xlsx'%(opentime, filename))
-pandas = pd_write.pandas_Module(excel_name=REPORT)
+pandas = pd_write.pandas_Module(REPORT)
 CHECK_PARSERMSG_LIST= ["WI 2022.07.12 t02",
                        "IOTBOX FW version : 23318",
                        "Power normal",
@@ -100,7 +99,7 @@ def main():
         except ValueError:
             print("Invalid input. Please enter again")
     
-    dict_tmp['SN'] = 'LPG5P2B002309-'+ f"{number:04d}"
+    dict_tmp['SN'] = '2P4C2310-'+ f"{number:04d}"
     
     time_out=20
     serial.Set_timeout(time_out)

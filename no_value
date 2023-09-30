@@ -1,0 +1,444 @@
+[2023-09-30 16:40:51.400896]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:40:54.200484]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:40:54.214775]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:40:57.998771]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:40:58.091887]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:40:58.099767]   factory reset.
+[2023-09-30 16:40:58.112402]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:40:58.863114]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:40:58.865939]   	(Rebuild 20220531)
+[2023-09-30 16:41:00.020041]   BG96 power on.
+[2023-09-30 16:41:00.024490]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:41:03.712524]   RDY
+[2023-09-30 16:41:03.714261]   <= AT+QFLST
+[2023-09-30 16:41:03.728763]   AT+QFLST
+[2023-09-30 16:41:03.731166]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:41:03.733689]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:41:03.736247]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:41:03.736776]   OK
+[2023-09-30 16:41:03.739984]   IOTBoxCA.pem found!!!
+[2023-09-30 16:41:03.745680]   <= AT+QFDEL="IOTBoxCA.pem" (to remove!!!)
+[2023-09-30 16:41:04.260670]   <= AT+QFLST (2nd)
+[2023-09-30 16:41:04.274473]   AT+QFLST
+[2023-09-30 16:41:04.275636]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:41:04.276219]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:41:04.276451]   OK
+[2023-09-30 16:41:04.281082]   =====================================
+[2023-09-30 16:41:04.285772]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:41:04.290431]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:41:04.290536]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:41:04.295621]   =====================================
+[2023-09-30 16:41:04.297939]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:41:04.298034]  [SYSTEM MSG] Not find "IOTBoxCC.pem has been uploaded.", reboot.
+[2023-09-30 16:41:04.298146]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:41:04.300021]   Go to infinite while loop ...
+[2023-09-30 16:41:04.837780]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:41:04.862014]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:41:05.230055]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:41:05.232833]   	(Rebuild 20220531)
+[2023-09-30 16:41:06.387067]   BG96 power on.
+[2023-09-30 16:41:06.391579]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:41:10.081725]   RDY
+[2023-09-30 16:41:10.083509]   <= AT+QFLST
+[2023-09-30 16:41:10.095093]   AT+QFLST
+[2023-09-30 16:41:10.097568]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:41:10.100142]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:41:10.100710]   OK
+[2023-09-30 16:41:10.106797]   <= AT+QFUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:41:10.236513]   BoxCA.pem",1226,100,1
+[2023-09-30 16:41:10.240094]   CONNECT
+[2023-09-30 16:41:10.240618]   A
+[2023-09-30 16:41:10.240869]   +QFUPL: 1226,137
+[2023-09-30 16:41:10.241013]   OK
+[2023-09-30 16:41:10.742536]   <= AT+QFLST (2nd)
+[2023-09-30 16:41:10.757453]   AT+QFLST
+[2023-09-30 16:41:10.758901]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:41:10.760215]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:41:10.762719]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:41:10.763295]   OK
+[2023-09-30 16:41:10.768470]   =====================================
+[2023-09-30 16:41:10.772952]   IOTBoxCA.pem has been uploaded.
+[2023-09-30 16:41:10.777477]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:41:10.782287]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:41:10.782464]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:41:10.787494]   =====================================
+[2023-09-30 16:41:52.233731]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:41:52.792651]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:41:52.804947]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:41:54.108510]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:41:54.194904]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:41:54.203055]   factory reset.
+[2023-09-30 16:41:54.215880]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:41:54.966985]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:41:54.970547]   	(Rebuild 20220531)
+[2023-09-30 16:41:56.126057]   BG96 power on.
+[2023-09-30 16:41:56.127965]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:41:59.854440]   RDY
+[2023-09-30 16:41:59.857033]   <= AT+QFLST
+[2023-09-30 16:41:59.870553]   AT+QFLST
+[2023-09-30 16:41:59.873081]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:41:59.875519]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:41:59.878146]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:41:59.878615]   OK
+[2023-09-30 16:41:59.881829]   IOTBoxCA.pem found!!!
+[2023-09-30 16:41:59.887546]   <= AT+QFDEL="IOTBoxCA.pem" (to remove!!!)
+[2023-09-30 16:42:00.403663]   <= AT+QFLST (2nd)
+[2023-09-30 16:42:00.413725]   AT+QFLST
+[2023-09-30 16:42:00.416324]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:42:00.419468]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:42:00.420062]   OK
+[2023-09-30 16:42:00.424512]   =====================================
+[2023-09-30 16:42:00.429421]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:42:00.435036]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:42:00.435157]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:42:00.439063]   =====================================
+[2023-09-30 16:42:00.443499]   Go to infinite while loop ...
+[2023-09-30 16:42:00.446105]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:42:00.446268]  [SYSTEM MSG] Not find "IOTBoxCC.pem has been uploaded.", reboot.
+[2023-09-30 16:42:00.446601]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:42:00.977336]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:42:01.002181]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:42:01.369579]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:42:01.372344]   	(Rebuild 20220531)
+[2023-09-30 16:42:02.526716]   BG96 power on.
+[2023-09-30 16:42:02.531750]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:42:06.234875]   RDY
+[2023-09-30 16:42:06.236989]   <= AT+QFLST
+[2023-09-30 16:42:06.247483]   AT+QFLST
+[2023-09-30 16:42:06.249889]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:42:06.252497]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:42:06.252950]   OK
+[2023-09-30 16:42:06.259274]   <= AT+QFUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:42:06.388227]   BoxCA.pem",1226,100,1
+[2023-09-30 16:42:06.391072]   CONNECT
+[2023-09-30 16:42:06.391325]   A
+[2023-09-30 16:42:06.391609]   +QFUPL: 1226,137
+[2023-09-30 16:42:06.392129]   OK
+[2023-09-30 16:42:06.895005]   <= AT+QFLST (2nd)
+[2023-09-30 16:42:06.912988]   AT+QFLST
+[2023-09-30 16:42:06.914731]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:42:06.915304]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:42:06.915660]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:42:06.915821]   OK
+[2023-09-30 16:42:06.921025]   =====================================
+[2023-09-30 16:42:06.925471]   IOTBoxCA.pem has been uploaded.
+[2023-09-30 16:42:06.930041]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:42:06.934847]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:42:06.935038]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:42:06.938383]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:42:06.940077]   =====================================
+[2023-09-30 16:42:06.944402]   Go to infinite while loop ...
+[2023-09-30 16:42:07.468114]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:42:07.485614]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/all_23318.hex.
+[2023-09-30 16:42:11.788163]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:42:11.874138]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:42:11.898314]  [SYSTEM MSG] searching parser msg "WI 2022.07.12 t02".
+[2023-09-30 16:42:12.263872]   WI 2022.07.12 t02
+[2023-09-30 16:42:12.265558]  [SYSTEM MSG] Find parser_msg "WI 2022.07.12 t02".
+[2023-09-30 16:42:12.267214]   <= Get Azbil meter function setting
+[2023-09-30 16:42:12.272751]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82005)
+[2023-09-30 16:42:12.272893]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:42:22.952069]   No valid package read!
+[2023-09-30 16:42:23.990599]   <== Set K9 to be mode 6
+[2023-09-30 16:42:23.997088]   <= IOTBOX_Meter_SK25_MeterCmd_Send(F22A90000600)
+[2023-09-30 16:42:32.286015]  [SYSTEM MSG] ['IOTBOX FW version : 23318'] is not found.
+[2023-09-30 16:42:32.286977]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:42:32.304210]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:42:35.163403]   No valid package read!
+[2023-09-30 16:42:36.203839]   <= Get Azbil meter function setting
+[2023-09-30 16:42:36.208434]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82009)
+[2023-09-30 16:42:46.887741]   No valid package read!
+[2023-09-30 16:42:47.927801]   ################# e_State_Box_Init #################
+[2023-09-30 16:42:47.932971]   IOTBOX FW version : 23318 (Using UTC time)
+[2023-09-30 16:42:47.933556]  [SYSTEM MSG] Find parser_msg "IOTBOX FW version : 23318".
+[2023-09-30 16:42:47.937731]     ################ Response TRUE #################
+[2023-09-30 16:42:47.943500]   0 wakeupTime: 0 (0x00000000)  wakepPeriod: 0 (0x00000000)
+[2023-09-30 16:42:47.958253]   VBAT = 3593
+[2023-09-30 16:42:47.959569]   Power normal.
+[2023-09-30 16:42:48.090196]   ################# State change end #################
+[2023-09-30 16:42:48.095137]   ############# e_State_Box_MeterProcess #############
+[2023-09-30 16:42:48.096306]   TaskNow: 0
+[2023-09-30 16:42:48.102001]    >>> in ../Src/main.c main Line:	201 
+[2023-09-30 16:42:48.107083]   		case e_IOTBOX_StateIndex_FirstTime:
+[2023-09-30 16:42:48.112823]    >>> in ../Src/main.c main Line:	210 
+[2023-09-30 16:42:48.118255]   		case e_IOTBOX_StateIndex_PeriodDegree:
+[2023-09-30 16:42:48.120756]   <= Get meter serial number
+[2023-09-30 16:42:48.127453]   <= IOTBOX_Meter_SK25_MeterCmd_Send(F200DD000000)
+[2023-09-30 16:43:30.616143]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:43:31.174063]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:43:31.181260]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:43:34.949283]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:43:35.043857]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:43:35.051887]   factory reset.
+[2023-09-30 16:43:35.052208]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:43:35.815045]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:43:35.817831]   	(Rebuild 20220531)
+[2023-09-30 16:43:36.972963]   BG96 power on.
+[2023-09-30 16:43:36.976375]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:43:40.707615]   RDY
+[2023-09-30 16:43:40.712384]   <= AT+QFLST
+[2023-09-30 16:43:40.724844]   AT+QFLST
+[2023-09-30 16:43:40.727319]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:43:40.729735]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:43:40.732343]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:43:40.732879]   OK
+[2023-09-30 16:43:40.736045]   IOTBoxCA.pem found!!!
+[2023-09-30 16:43:40.741747]   <= AT+QFDEL="IOTBoxCA.pem" (to remove!!!)
+[2023-09-30 16:43:41.257078]   <= AT+QFLST (2nd)
+[2023-09-30 16:43:41.267111]   AT+QFLST
+[2023-09-30 16:43:41.269620]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:43:41.272170]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:43:41.272644]   OK
+[2023-09-30 16:43:41.277873]   =====================================
+[2023-09-30 16:43:41.282543]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:43:41.287286]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:43:41.287365]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:43:41.288388]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:43:41.288460]  [SYSTEM MSG] Not find "IOTBoxCC.pem has been uploaded.", reboot.
+[2023-09-30 16:43:41.288652]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:43:41.292381]   =====================================
+[2023-09-30 16:43:41.296971]   Go to infinite while loop ...
+[2023-09-30 16:43:41.818804]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:43:41.843529]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:43:42.211082]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:43:42.213845]   	(Rebuild 20220531)
+[2023-09-30 16:43:43.368425]   BG96 power on.
+[2023-09-30 16:43:43.372415]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:43:47.075565]   RDY
+[2023-09-30 16:43:47.077646]   <= AT+QFLST
+[2023-09-30 16:43:47.089197]   AT+QFLST
+[2023-09-30 16:43:47.091665]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:43:47.094314]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:43:47.094793]   OK
+[2023-09-30 16:43:47.100933]   <= AT+QFUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:43:47.229178]   TBoxCA.pem",1226,100,1
+[2023-09-30 16:43:47.232334]   CONNECT
+[2023-09-30 16:43:47.232972]   A
+[2023-09-30 16:43:47.233359]   +QFUPL: 1226,137
+[2023-09-30 16:43:47.233566]   OK
+[2023-09-30 16:43:47.736173]   <= AT+QFLST (2nd)
+[2023-09-30 16:43:47.749311]   AT+QFLST
+[2023-09-30 16:43:47.752299]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:43:47.754179]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:43:47.756760]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:43:47.757292]   OK
+[2023-09-30 16:43:47.762509]   =====================================
+[2023-09-30 16:43:47.766991]   IOTBoxCA.pem has been uploaded.
+[2023-09-30 16:43:47.771552]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:43:47.776281]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:43:47.776478]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:43:47.777222]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:43:47.781440]   =====================================
+[2023-09-30 16:43:47.785860]   Go to infinite while loop ...
+[2023-09-30 16:43:48.303058]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:43:48.314976]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/all_23318.hex.
+[2023-09-30 16:43:52.603458]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:43:52.694447]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:43:52.707444]  [SYSTEM MSG] searching parser msg "WI 2022.07.12 t02".
+[2023-09-30 16:43:53.086411]   WI 2022.07.12 t02
+[2023-09-30 16:43:53.087601]  [SYSTEM MSG] Find parser_msg "WI 2022.07.12 t02".
+[2023-09-30 16:43:53.089046]   <= Get Azbil meter function setting
+[2023-09-30 16:43:53.093001]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82005)
+[2023-09-30 16:43:53.093184]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:44:03.772070]   No valid package read!
+[2023-09-30 16:44:04.810446]   <== Set K9 to be mode 6
+[2023-09-30 16:44:04.817081]   <= IOTBOX_Meter_SK25_MeterCmd_Send(F22A90000600)
+[2023-09-30 16:44:13.102904]  [SYSTEM MSG] ['IOTBOX FW version : 23318'] is not found.
+[2023-09-30 16:44:13.104075]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:44:13.107970]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:44:15.983195]   No valid package read!
+[2023-09-30 16:44:17.022307]   <= Get Azbil meter function setting
+[2023-09-30 16:44:17.028075]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82009)
+[2023-09-30 16:44:27.708662]   No valid package read!
+[2023-09-30 16:44:28.747952]   ################# e_State_Box_Init #################
+[2023-09-30 16:44:28.754679]   IOTBOX FW version : 23318 (Using UTC time)
+[2023-09-30 16:44:28.755092]  [SYSTEM MSG] Find parser_msg "IOTBOX FW version : 23318".
+[2023-09-30 16:44:28.758741]     ################ Response TRUE #################
+[2023-09-30 16:44:28.764501]   0 wakeupTime: 0 (0x00000000)  wakepPeriod: 0 (0x00000000)
+[2023-09-30 16:44:37.553100]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:44:38.115566]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:44:38.132457]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:44:41.897996]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:44:41.985301]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:44:41.993372]   factory reset.
+[2023-09-30 16:44:41.993624]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:44:42.756688]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:44:42.759474]   	(Rebuild 20220531)
+[2023-09-30 16:44:43.915432]   BG96 power on.
+[2023-09-30 16:44:43.918107]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:44:47.618289]   RDY
+[2023-09-30 16:44:47.622239]   <= AT+QFLST
+[2023-09-30 16:44:47.633961]   AT+QFLST
+[2023-09-30 16:44:47.636445]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:44:47.638900]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:44:47.641492]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:44:47.641992]   OK
+[2023-09-30 16:44:47.645213]   IOTBoxCA.pem found!!!
+[2023-09-30 16:44:47.650936]   <= AT+QFDEL="IOTBoxCA.pem" (to remove!!!)
+[2023-09-30 16:44:48.164965]   <= AT+QFLST (2nd)
+[2023-09-30 16:44:48.174883]   AT+QFLST
+[2023-09-30 16:44:48.177247]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:44:48.179858]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:44:48.180365]   OK
+[2023-09-30 16:44:48.185614]   =====================================
+[2023-09-30 16:44:48.190277]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:44:48.194958]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:44:48.195074]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:44:48.200110]   =====================================
+[2023-09-30 16:44:48.201460]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:44:48.201556]  [SYSTEM MSG] Not find "IOTBoxCC.pem has been uploaded.", reboot.
+[2023-09-30 16:44:48.201644]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:44:48.204549]   Go to infinite while loop ...
+[2023-09-30 16:44:48.715736]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:44:48.728703]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:44:49.107950]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:44:49.110715]   	(Rebuild 20220531)
+[2023-09-30 16:44:50.265086]   BG96 power on.
+[2023-09-30 16:44:50.269559]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:44:53.954891]   RDY
+[2023-09-30 16:44:53.956004]   <= AT+QFLST
+[2023-09-30 16:44:53.967436]   AT+QFLST
+[2023-09-30 16:44:53.969822]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:44:53.972428]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:44:53.972941]   OK
+[2023-09-30 16:44:53.979137]   <= AT+QFUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:44:54.110129]   FUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:44:54.113545]   CONNECT
+[2023-09-30 16:44:54.114401]   A
+[2023-09-30 16:44:54.114643]   +QFUPL: 1226,137
+[2023-09-30 16:44:54.114785]   OK
+[2023-09-30 16:44:54.616242]   <= AT+QFLST (2nd)
+[2023-09-30 16:44:54.631213]   AT+QFLST
+[2023-09-30 16:44:54.632917]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:44:54.634027]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:44:54.636638]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:44:54.637137]   OK
+[2023-09-30 16:44:54.642551]   =====================================
+[2023-09-30 16:44:54.646837]   IOTBoxCA.pem has been uploaded.
+[2023-09-30 16:44:54.651432]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:44:54.656133]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:44:54.656285]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:44:54.657574]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:44:54.661319]   =====================================
+[2023-09-30 16:44:54.665718]   Go to infinite while loop ...
+[2023-09-30 16:44:55.189390]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:44:55.202007]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/all_23318.hex.
+[2023-09-30 16:44:59.502482]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:44:59.598365]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:44:59.622247]  [SYSTEM MSG] searching parser msg "WI 2022.07.12 t02".
+[2023-09-30 16:44:59.989298]   WI 2022.07.12 t02
+[2023-09-30 16:44:59.990846]  [SYSTEM MSG] Find parser_msg "WI 2022.07.12 t02".
+[2023-09-30 16:44:59.991811]   <= Get Azbil meter function setting
+[2023-09-30 16:44:59.997076]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82005)
+[2023-09-30 16:45:00.010663]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:45:10.676216]   No valid package read!
+[2023-09-30 16:45:11.714790]   <== Set K9 to be mode 6
+[2023-09-30 16:45:11.721175]   <= IOTBOX_Meter_SK25_MeterCmd_Send(F22A90000600)
+[2023-09-30 16:45:20.013645]  [SYSTEM MSG] ['IOTBOX FW version : 23318'] is not found.
+[2023-09-30 16:45:20.014873]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:45:20.019651]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:45:22.887177]   No valid package read!
+[2023-09-30 16:45:23.926826]   <= Get Azbil meter function setting
+[2023-09-30 16:45:23.932331]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82009)
+[2023-09-30 16:45:34.611211]   No valid package read!
+[2023-09-30 16:45:35.652198]   ################# e_State_Box_Init #################
+[2023-09-30 16:45:35.658122]   IOTBOX FW version : 23318 (Using UTC time)
+[2023-09-30 16:45:35.658330]  [SYSTEM MSG] Find parser_msg "IOTBOX FW version : 23318".
+[2023-09-30 16:45:35.662907]     ################ Response TRUE #################
+[2023-09-30 16:45:35.668698]   0 wakeupTime: 0 (0x00000000)  wakepPeriod: 0 (0x00000000)
+[2023-09-30 16:49:25.162237]   Execute AT command : AT+CSQ
+[2023-09-30 16:49:25.261890]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:49:25.267220]   AT command transmit success.
+[2023-09-30 16:49:25.268059]   AT+CSQ
+[2023-09-30 16:49:25.269116]   +CSQ: 99,99
+[2023-09-30 16:49:25.269664]   OK
+[2023-09-30 16:49:25.273158]   Not known or not detectable.
+[2023-09-30 16:49:25.805446]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:25.815293]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:49:29.582648]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:49:29.671978]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:29.679954]   factory reset.
+[2023-09-30 16:49:29.680101]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:49:30.443129]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:49:30.445921]   	(Rebuild 20220531)
+[2023-09-30 16:49:31.610912]   BG96 power on.
+[2023-09-30 16:49:31.611646]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:49:35.316507]   RDY
+[2023-09-30 16:49:35.318274]   <= AT+QFLST
+[2023-09-30 16:49:35.332937]   AT+QFLST
+[2023-09-30 16:49:35.335457]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:49:35.337905]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:49:35.340574]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:49:35.341090]   OK
+[2023-09-30 16:49:35.344170]   IOTBoxCA.pem found!!!
+[2023-09-30 16:49:35.349889]   <= AT+QFDEL="IOTBoxCA.pem" (to remove!!!)
+[2023-09-30 16:49:35.863425]   <= AT+QFLST (2nd)
+[2023-09-30 16:49:35.879513]   AT+QFLST
+[2023-09-30 16:49:35.880871]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:49:35.881494]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:49:35.882053]   OK
+[2023-09-30 16:49:35.883996]   =====================================
+[2023-09-30 16:49:35.888769]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:49:35.893384]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:49:35.893514]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:49:35.895200]  [SYSTEM MSG] Result not empty, keep searching.
+[2023-09-30 16:49:35.895448]  [SYSTEM MSG] Not find "IOTBoxCC.pem has been uploaded.", reboot.
+[2023-09-30 16:49:35.895565]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:49:35.898586]   =====================================
+[2023-09-30 16:49:35.902956]   Go to infinite while loop ...
+[2023-09-30 16:49:36.423690]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:36.449197]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:49:36.815796]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:49:36.818554]   	(Rebuild 20220531)
+[2023-09-30 16:49:37.978933]   BG96 power on.
+[2023-09-30 16:49:37.979960]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:49:39.314231]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:49:39.855203]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:39.867208]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/BLwAPP_BG96_PEM_UploadRm.hex.
+[2023-09-30 16:49:41.185834]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:49:41.280062]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:41.288129]   factory reset.
+[2023-09-30 16:49:41.300917]  [SYSTEM MSG] searching parser msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:49:42.051454]   WI 2022.01.26 r2.3-317-2_BG96_KeepPowerOn_UploadPEM
+[2023-09-30 16:49:42.054155]   	(Rebuild 20220531)
+[2023-09-30 16:49:43.208383]   BG96 power on.
+[2023-09-30 16:49:43.212808]   Waiting RDY... (time-out: 15sec)
+[2023-09-30 16:49:46.921130]   RDY
+[2023-09-30 16:49:46.923000]   <= AT+QFLST
+[2023-09-30 16:49:46.934136]   AT+QFLST
+[2023-09-30 16:49:46.936607]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:49:46.939292]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:49:46.939713]   OK
+[2023-09-30 16:49:46.945914]   <= AT+QFUPL="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:49:47.074181]   ="IOTBoxCA.pem",1226,100,1
+[2023-09-30 16:49:47.076129]   CONNECT
+[2023-09-30 16:49:47.077076]   A
+[2023-09-30 16:49:47.077399]   +QFUPL: 1226,137
+[2023-09-30 16:49:47.077574]   OK
+[2023-09-30 16:49:47.580789]   <= AT+QFLST (2nd)
+[2023-09-30 16:49:47.593485]   AT+QFLST
+[2023-09-30 16:49:47.597639]   +QFLST: "IOTBoxCA.pem",1226
+[2023-09-30 16:49:47.598518]   +QFLST: "IOTBoxCC.pem",1226
+[2023-09-30 16:49:47.600980]   +QFLST: "IOTBoxKey.pem",1704
+[2023-09-30 16:49:47.601552]   OK
+[2023-09-30 16:49:47.606668]   =====================================
+[2023-09-30 16:49:47.611145]   IOTBoxCA.pem has been uploaded.
+[2023-09-30 16:49:47.615704]   IOTBoxCC.pem has been uploaded.
+[2023-09-30 16:49:47.620456]   IOTBoxKey.pem has been uploaded.
+[2023-09-30 16:49:47.620624]  [SYSTEM MSG] Find parser_msg "IOTBoxCA.pem has been uploaded.".
+[2023-09-30 16:49:47.625649]   =====================================
+[2023-09-30 16:49:47.630017]   Go to infinite while loop ...
+[2023-09-30 16:49:47.630918]  [SYSTEM MSG] Jlink reboot device.
+[2023-09-30 16:49:48.154953]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:48.172719]  [SYSTEM MSG] Jlink flash_file=/Users/arthur/workdir/Wave_in/FW/all_23318.hex.
+[2023-09-30 16:49:52.499414]  [SYSTEM MSG] Jlink flash done.
+[2023-09-30 16:49:52.589861]   Run program in BLK_1 from Bootloader ...
+[2023-09-30 16:49:52.613633]  [SYSTEM MSG] searching parser msg "WI 2022.07.12 t02".
+[2023-09-30 16:49:52.979642]   WI 2022.07.12 t02
+[2023-09-30 16:49:52.981325]  [SYSTEM MSG] Find parser_msg "WI 2022.07.12 t02".
+[2023-09-30 16:49:52.983372]   <= Get Azbil meter function setting
+[2023-09-30 16:49:52.988597]   <= IOTBOX_Meter_SK25_MeterCmd_Send(82005)
+[2023-09-30 16:49:52.988745]  [SYSTEM MSG] searching parser msg "IOTBOX FW version : 23318".
+[2023-09-30 16:50:03.667717]   No valid package read!
+[2023-09-30 16:50:04.706088]   <== Set K9 to be mode 6
+[2023-09-30 16:50:04.712670]   <= IOTBOX_Meter_SK25_MeterCmd_Send(F22A90000600)

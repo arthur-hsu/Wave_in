@@ -13,7 +13,7 @@ ALL_23318_HEX   = os.path.join(WORK_FILE,'NB_test','all_23318.hex')
 REPORT          = os.path.join(WORK_FILE,'REPORT.xlsx')
 
 class jlink_module():
-    def __init__(self,MCU ,dict_tmp,columns):
+    def __init__(self,MCU ,dict_tmp={},columns=[]):
         self.jlink      = pylink.JLink()
         self.dict_tmp   = dict_tmp
         self.columns    = columns
