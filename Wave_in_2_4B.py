@@ -9,9 +9,17 @@ from styleframe import StyleFrame
 import src.pandas_lib as pd_write
 
 
+def move_to_front(dictionary, key_to_move):
+    # 创建一个新的字典
+    new_dict = {key_to_move: dictionary[key_to_move]}
+    # 遍历原始字典，跳过要移到前面的键值对
+    for key, value in dictionary.items():
+        if key != key_to_move:
+            new_dict[key] = value
+    return new_dict
 
-device_count = 0
-df , columns , dict_tmp , flag_IMSI = pd.DataFrame(columns=[]) , [] , {} , False
+columns , dict_tmp , flag_IMSI =  [] , {} , False
+
 opentime            = time.strftime( "%Y.%m.%d_%X", time.localtime() ).replace(":", "")
 filename            = os.path.basename(__file__).replace('.py','')
 MCU                 = 'STM32F303RE'
@@ -24,7 +32,7 @@ LOG_DIRECTORY       = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename))
 PEM_HEX             = os.path.join(WORK_FILE,'FW','BLwAPP_BG96_PEM_UploadRm.hex')
 ALL_23318_HEX       = os.path.join(WORK_FILE,'FW','all_23318.hex')
 REPORT              = os.path.join(LOG_Folder, '%s-%s'%(opentime, filename), '%s_%s REPORT.xlsx'%(opentime, filename))
-excel_writer        = StyleFrame.ExcelWriter(REPORT)
+pandas = pd_write.pandas_Module(excel_name=REPORT)
 CHECK_PARSERMSG_LIST= ["WI 2022.07.12 t02",
                        "IOTBOX FW version : 23318",
                        "Power normal",
@@ -55,12 +63,8 @@ CHECK_PARSERMSG_LIST= ["WI 2022.07.12 t02",
 
 
 def main():
-    global device_count
-    global columns, dict_tmp, df
+    global columns, dict_tmp, device_count
     
-    # print(f"{columns=}")
-    # print(f"{dict_tmp=}")
-    # print(df)
 
     def keyword_parser(parser_msg,loop):
         begin_loop=loop
@@ -77,19 +81,27 @@ def main():
                 log.Logger('[SYSTEM MSG] Result not empty, keep searching.',"BLUE","WHITE")
                 continue
             if parser_msg in result:
-                columns.append(parser_msg)
                 dict_tmp[parser_msg]="V"
                 # print(f"{dict_tmp=}")
                 # print('reboot times= %s'%loop)
                 return loop
             if loop>=(begin_loop+Rety_time) and parser_msg not in result:
-                columns.append(parser_msg)
                 dict_tmp[parser_msg]="X"
                 # print(f"{dict_tmp=}")
                 # print('reboot times= %s'%loop)
                 return loop
 
 
+    while True: 
+        sn_str = input("Enter S/N: ")
+        try:
+            number = int(sn_str)
+            break
+        except ValueError:
+            print("Invalid input. Please enter again")
+    
+    dict_tmp['SN'] = 'LPG5P2B002309-'+ f"{number:04d}"
+    
     time_out=20
     serial.Set_timeout(time_out)
     if not serial.parser():
@@ -109,7 +121,6 @@ def main():
             result=serial.Write('IOTBoxCA.pem has been uploaded.',"IOTBoxKey.pem has been uploaded.",read_parser=1)
             # print(f'{result=}')
             if result ==['IOTBoxCA.pem has been uploaded.', 'IOTBoxCC.pem has been uploaded.', 'IOTBoxKey.pem has been uploaded.']: 
-                columns.append('rety find 3.pem')
                 dict_tmp['rety find 3.pem']=loop_1
                 break
             if result !=[] and result!=['IOTBoxCA.pem has been uploaded.', 'IOTBoxCC.pem has been uploaded.', 'IOTBoxKey.pem has been uploaded.']: 
@@ -142,7 +153,6 @@ def main():
             # print(f"{columns=}")
             # print(f"{dict_tmp=}")
 
-        columns.append("loop_2")
         dict_tmp['loop_2']=loop_2
 
 
@@ -167,7 +177,7 @@ def main():
                     exe_time=datetime.datetime.now()-start_time
                     exe_time=(str(exe_time).split('.'))[0]
                     print(f"{exe_time=}")
-
+                    
                     columns.insert(0, "Execute time")
                     dict_tmp["Execute time"]=exe_time
 
@@ -176,19 +186,20 @@ def main():
                     print(f"{IMEI=}")
                     dict_tmp["IMEI"]=IMEI
 
-                    columns.append("rety find IMEI")
                     dict_tmp['rety find IMEI']=loop_3
-                    # print(f"{columns=}")
-                    # print(f"{dict_tmp=}")
+                    dict_tmp = move_to_front(dict_tmp, 'Execute time')
+                    dict_tmp = move_to_front(dict_tmp, 'IMEI')
+                    dict_tmp = move_to_front(dict_tmp, 'SN')
 
-                    df = pd_write.write(df,dict_tmp,columns)
+                    pandas.write(dict_tmp)
+
 
                     f.close()
                     new_filename = os.path.join(LOG_DIRECTORY, "{}_{}.txt".format(device_count,IMEI))
                     os.rename(cf.get_value('logname'), new_filename)
                     #for switch DEV
-                    while serial_lib.Port_is_open(port):pass
-                    print('[SYSTEM MSG] USB is disconnected')
+                    # while serial_lib.Port_is_open(port):pass
+                    # print('[SYSTEM MSG] USB is disconnected')
                     #for switch DEV
                     break
     except KeyboardInterrupt:
@@ -196,14 +207,14 @@ def main():
         serial.Close()
         f.close()
         jlink.close()
-        # df_empty=(df.empty)
-        if df.empty!=True: pd_write.save_to_excel(df,excel_writer,columns)
-        sys.exit("[SYSTEM MSG] Exit script")
+        return
     except Exception as e:
-        log.Logger("[SYSTEM MSG] Test procedure Exception '{}' happened\r\n".format(e),fore='RED',timestamp=0)
-        serial.Close()
+        print('Error len : %s, %s'%(e.__traceback__.tb_lineno, e))
+        log.Logger("[SYSTEM MSG] Error len : %s, %s"%(e.__traceback__.tb_lineno, e),fore='RED',timestamp=0)
         f.close()
         jlink.close()
+        print('fail')
+        while serial_lib.Port_is_open(port):pass
 
 
 if __name__ == '__main__':

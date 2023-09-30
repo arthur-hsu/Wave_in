@@ -8,7 +8,11 @@ import pandas as pd
 import src.pandas_lib as pd_write
 from zipfile import ZipFile
 import shutil
-import re
+import re 
+
+
+
+
 def move_to_front(dictionary, key_to_move):
     # 创建一个新的字典
     new_dict = {key_to_move: dictionary[key_to_move]}
@@ -115,12 +119,12 @@ def main():
             if flash_result:break
 
 
-        threading.Thread(target=jlink.reboot,args=(1.5,)).start()        
+        threading.Thread(target=jlink.reboot,args=(1.5,)).start()
         time.sleep(1)
 
         check_list = ['SmartTxr_IOT1_',
                'gpio state = ', 
-               'Current PVD state = ']        
+               'Current PVD state = ']
         _parser_value(check_list)
 
 
@@ -143,7 +147,7 @@ def main():
                         ip_address = match.group(0)
                         if ip_address != '127.0.0.1':
                             dict_tmp['IP']=ip_address 
-                            print(dict_tmp['IP'])                          
+                            print(dict_tmp['IP'])
                     break
             if flag:break
         dict_tmp['WaitIPv4v6Ready_loop'] = WaitIPv4v6Ready_loop
@@ -214,7 +218,7 @@ def main():
         jlink.close()
         print('fail')
         while serial_lib.Port_is_open(port):pass
-        
+
 
 if __name__ == '__main__':
     device_count = 0
